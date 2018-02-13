@@ -1,4 +1,4 @@
-package com.javabycode.model;
+package prog3.model;
 
 public class AuthTokenInfo {
 

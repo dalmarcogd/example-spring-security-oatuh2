@@ -1,7 +1,4 @@
-package com.javabycode.controller;
-
-import com.javabycode.model.Fruit;
-import com.javabycode.service.FruitService;
+package prog3.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
+
+import prog3.model.Fruit;
+import prog3.service.FruitService;
 
 import java.util.List;
 

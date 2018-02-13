@@ -1,8 +1,8 @@
-package com.javabycode.config;
+package prog3.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-import com.javabycode.filter.CORSFilter;
+import prog3.filter.CORSFilter;
 
 import javax.servlet.Filter;
 

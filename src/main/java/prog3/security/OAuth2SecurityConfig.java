@@ -1,4 +1,4 @@
-package com.javabycode.security;
+package prog3.security;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -22,13 +22,11 @@ public class OAuth2SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Autowired
 	private ClientDetailsService clientService;
-	
+
 	@Autowired
     public void globalUserDetails(AuthenticationManagerBuilder auth) throws Exception {
         auth.inMemoryAuthentication()
-        .withUser("javabycode").password("123456").roles("USER")
-        .and()
-        .withUser("admin").password("admin123").roles("ADMIN");
+        	.withUser("admin").password("admin123").roles("ADMIN");
     }
 
     @Override
@@ -61,7 +59,7 @@ public class OAuth2SecurityConfig extends WebSecurityConfigurerAdapter {
 		handler.setClientDetailsService(clientService);
 		return handler;
 	}
-	
+
 	@Bean
 	@Autowired
 	public ApprovalStore approvalStore(TokenStore tokenStore) throws Exception {
@@ -69,5 +67,5 @@ public class OAuth2SecurityConfig extends WebSecurityConfigurerAdapter {
 		store.setTokenStore(tokenStore);
 		return store;
 	}
-	
+
 }

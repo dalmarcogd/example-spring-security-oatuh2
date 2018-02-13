@@ -1,8 +1,8 @@
-package com.javabycode.dao;
+package prog3.dao;
 
 import java.util.List;
 
-import com.javabycode.model.Fruit;
+import prog3.model.Fruit;
 
 public interface FruitDAO {
 	    

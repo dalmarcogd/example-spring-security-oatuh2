@@ -1,4 +1,4 @@
-package com.javabycode.security;
+package prog3.security;
 
 import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
 

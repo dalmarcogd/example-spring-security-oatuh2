@@ -1,10 +1,10 @@
-package com.javabycode.service;
+package prog3.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.javabycode.dao.FruitDAO;
-import com.javabycode.model.Fruit;
+import prog3.dao.FruitDAO;
+import prog3.model.Fruit;
 
 import java.util.List;
 

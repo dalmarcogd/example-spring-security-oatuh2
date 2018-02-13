@@ -1,4 +1,4 @@
-package com.javabycode.dao;
+package prog3.dao;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,17 +6,16 @@ import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.stereotype.Repository;
 
-import com.javabycode.model.Fruit;
+import prog3.model.Fruit;
 
 @Repository
 public class FruitDAOImpl implements FruitDAO {
 
-	// Dummy database. Initialize with some dummy values.
 	private static final AtomicLong generateID = new AtomicLong();
-	
+
 	private static List<Fruit> fruits;
 	{
-		fruits = new ArrayList<Fruit>();
+		fruits = new ArrayList<>();
 		fruits.add(new Fruit(generateID.incrementAndGet(), "Apple", "USA", "Delicious flavour"));
 		fruits.add(new Fruit(generateID.incrementAndGet(), "Orange", "Indonesia", "Delicious flavour"));
 		fruits.add(new Fruit(generateID.incrementAndGet(), "Banana", "Cuba", "Good quality"));
@@ -24,13 +23,14 @@ public class FruitDAOImpl implements FruitDAO {
 
 	/**
 	 * Returns list of fruits from dummy database.
-	 * 
+	 *
 	 * @return list of fruits
 	 */
+	@Override
 	public List<Fruit> getAll() {
 		return fruits;
 	}
-	
+
     @Override
     public Fruit findById(int id) {
         for (Fruit fruit : fruits){
@@ -62,7 +62,7 @@ public class FruitDAOImpl implements FruitDAO {
     	for (Fruit fr : fruits) {
 			if (fruit.getId() == fr.getId()){
 		        int index = fruits.indexOf(fr);
-		        fruits.set(index, fruit);				
+		        fruits.set(index, fruit);
 			}
 		}
     }
@@ -76,6 +76,6 @@ public class FruitDAOImpl implements FruitDAO {
     @Override
     public boolean exists(Fruit fruit) {
         return findByName(fruit.getName()) != null;
-    }	
+    }
 
 }

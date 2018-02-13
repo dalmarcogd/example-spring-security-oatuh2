@@ -1,8 +1,8 @@
-package com.javabycode.service;
+package prog3.service;
 
 import java.util.List;
 
-import com.javabycode.model.Fruit;
+import prog3.model.Fruit;
 
 public interface FruitService {
 
